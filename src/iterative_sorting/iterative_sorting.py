@@ -17,8 +17,13 @@ def selection_sort(arr):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    # Your code here
-
+    swapped_this_cycle = True
+    while swapped_this_cycle:
+        swapped_this_cycle = False
+        for i in range(len(arr)-1):
+            if arr[i] > arr[i+1]:
+                arr[i], arr[i+1] = arr[i+1], arr[i]
+                swapped_this_cycle = True
 
     return arr
 
